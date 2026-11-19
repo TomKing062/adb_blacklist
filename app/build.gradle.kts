@@ -9,8 +9,9 @@ android {
 
     defaultConfig {
         applicationId = "com.qutick.adbblacklist"
-        // The module is developed and tested against Android 15-17.
-        minSdk = 35
+        // Android 11-17 share the same ADB debugging manager APIs used here.
+        // Current testing is only done on Android 17.
+        minSdk = 30
         targetSdk = 37
         versionCode = 1
         versionName = "0.1.0"

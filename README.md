@@ -1,6 +1,6 @@
 # ADB 黑名单
 
-一个面向 Android 15–17 的 LSPosed 模块：按电脑的 **ADB 公钥指纹**维护黑名单。黑名单中的电脑请求 USB 调试时，系统不再弹出授权窗口，而是直接拒绝，并（可选）发一条低优先级通知。
+一个面向 Android 11+的 LSPosed 模块：按电脑的 **ADB 公钥指纹**维护黑名单。黑名单中的电脑请求 USB 调试时，系统不再弹出授权窗口，而是直接拒绝，并（可选）发一条低优先级通知。当前 Android 17 (Xiaomi 18 Fold) 实测正常。
 
 包名：`com.qutick.adbblacklist`
 
@@ -49,7 +49,9 @@
 
 ## 兼容性
 
-- Android 15 / 16 / 17（API 35–37）；AOSP 15、16、main 分支的 `AdbDebuggingManager` 流程一致。
+- Android 11 / 12 / 13 / 14 / 15 / 16 / 17（API 30–37）。
+- Android 11–17 使用同一组 `AdbDebuggingManager` API：`startConfirmationForKey`、`allowDebugging`/`denyDebugging`、`getPairedDevices`、`unpairDevice`、`findKeyFromFingerprint`、`removeKey`，以及 `Map` 形态的 `mConnectedKeys`。
+- 当前进在 Android 17 实测；11–16 尚未逐版本实测，首次使用时请先看 `adb logcat -s AdbBlacklist`。
 - LSPosed（libxposed API 101+）。
 - 仅处理 **USB ADB 授权**；无线调试不在 v1 范围内。
 
