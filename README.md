@@ -93,3 +93,16 @@ bash ./gradlew :app:assembleDebug
 - 同一台电脑使用不同 ADB 私钥时视为不同设备。
 - 模块依赖 AOSP 的私有实现细节；如果厂商 ROM 大幅改动 `AdbDebuggingManager`，需要按日志适配。
 - 撤销授权后，adbd 断开是异步的；app 会在约 0.7 秒后自动刷新一次。
+
+## 鸣谢
+
+https://github.com/TigerSpirit217/USBManager
+
+## 许可证
+
+Copyright © TomKing062 · [Mulan PubL v2](https://license.coscl.org.cn/MulanPubL-2.0)
+
+THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND,
+EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT,
+MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
+
