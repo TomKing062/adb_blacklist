@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <queries>
+        <provider android:authorities="io.github.libxposed.service" />
+    </queries>
+
+    <!--
+        The app defines and holds its own signature permission. The system_server
+        receiver registered by the hook requires this permission from the sender,
+        so only this APK (or an app signed with the same key) can manage the
+        blacklist. system_server itself does not need to hold it when replying.
+    -->
+    <permission
+        android:name="com.qutick.adbblacklist.permission.MANAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="com.qutick.adbblacklist.permission.MANAGE" />
+
+    <application
+        android:allowBackup="false"
+        android:description="@string/module_description"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AdbBlacklist"
+        tools:targetApi="37">
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

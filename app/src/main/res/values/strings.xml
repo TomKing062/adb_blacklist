@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ADB 黑名单</string>
+    <string name="module_description">按电脑公钥维护 ADB 调试黑名单；命中时不再弹出授权窗，直接拒绝并通知。</string>
+
+    <string name="screen_title">ADB 黑名单</string>
+    <string name="status_connected">系统服务已连接 · Android %1$d</string>
+    <string name="status_disconnected">系统服务未连接</string>
+    <string name="status_not_ready">已连接系统服务，但 ADB 管理器尚未就绪</string>
+    <string name="status_hint">请在 LSPosed 中启用本模块，作用域勾选“系统”，然后重启手机。</string>
+    <string name="module_inactive_title">模块尚未激活</string>
+
+    <string name="action_refresh">刷新</string>
+    <string name="action_blacklist">拉黑</string>
+    <string name="action_unblacklist">解除拉黑</string>
+    <string name="action_clear">清空</string>
+    <string name="action_confirm">确认</string>
+    <string name="action_cancel">取消</string>
+
+    <string name="section_blacklist">黑名单</string>
+    <string name="section_paired">已授权电脑</string>
+    <string name="section_history">连接历史</string>
+    <string name="section_settings">设置</string>
+
+    <string name="empty_blacklist">黑名单为空。可在历史或已授权列表中把电脑加入黑名单。</string>
+    <string name="empty_paired">没有已授权的电脑。</string>
+    <string name="empty_history">还没有连接记录。电脑首次请求 ADB 授权时会出现在这里。</string>
+    <string name="history_hint">弹窗出现时即记录；允许或拒绝都会保留在这里。</string>
+
+    <string name="label_unknown_host">未知电脑</string>
+    <string name="label_authorized">已授权</string>
+    <string name="label_connected">当前已连接</string>
+    <string name="label_blacklisted">已在黑名单</string>
+    <string name="label_added_at">加入时间：%1$s</string>
+
+    <string name="blacklist_confirm_title">拉黑这台电脑？</string>
+    <string name="blacklist_confirm_message">将把“%1$s”加入黑名单。\n\n公钥指纹：%2$s\n\n如果它已经授权，会立即撤销授权并断开当前调试连接；以后连接时不再弹窗，直接拒绝。</string>
+    <string name="unblacklist_confirm_title">解除拉黑？</string>
+    <string name="unblacklist_confirm_message">解除后，这台电脑下次连接时会恢复系统默认的授权弹窗。</string>
+    <string name="clear_history_confirm_title">清空连接历史？</string>
+    <string name="clear_history_confirm_message">只清除历史记录，黑名单会保留。</string>
+
+    <string name="notify_switch_title">拦截时发送通知</string>
+    <string name="notify_switch_desc">黑名单电脑尝试调试时发一条低优先级通知。</string>
+    <string name="retention_title">历史保留</string>
+    <string name="retention_value">%1$d 天</string>
+    <string name="retention_forever">永久保留</string>
+    <string name="retention_dialog_title">历史保留时长</string>
+    <string name="retention_days_7">7 天</string>
+    <string name="retention_days_30">30 天</string>
+    <string name="retention_days_90">90 天</string>
+
+    <string name="history_summary">最近请求：%1$s · 请求 %2$d 次 · %3$s</string>
+    <string name="history_blocked_count">已拦截 %1$d 次</string>
+    <string name="result_pending">等待确认</string>
+    <string name="result_blocked">已拦截</string>
+    <string name="result_denied">已拒绝</string>
+    <string name="result_allowed_once">允许一次</string>
+    <string name="result_allowed_always">始终允许</string>
+
+    <string name="loading">正在读取…</string>
+    <string name="operation_failed">操作失败：%1$s</string>
+    <string name="operation_timeout">系统服务没有响应，请确认模块已启用并重启过手机。</string>
+    <string name="operation_invalid">参数无效。</string>
+    <string name="operation_done">已更新</string>
+    <string name="version_label">版本 %1$s</string>
+</resources>
